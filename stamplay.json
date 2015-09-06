@@ -1,0 +1,10 @@
+{
+  "appId": "stamplaychat",
+  "apiKey": "054a21af87fb9c6b34137040eb1c6fc9ecf2c3a8856e8452e1ba1280cc5171d4",
+  "public": "./www",
+  "ignore": [
+    "stamplay.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
