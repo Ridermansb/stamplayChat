@@ -1,37 +1,34 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <link rel="shortcut icon" href="/favicon.ico?v=2" />
-    <link rel="icon" sizes="16x16 32x32" href="/favicon.ico?v=2">
+    <link rel="shortcut icon" href="favicon.ico?v=2"/>
+    <link rel="icon" sizes="16x16 32x32" href="favicon.ico?v=2">
 
     <title>Stamplay Chat</title>
 
+    <link href="//fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic">
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="lib/ionic-material/dist/ionic.material.min.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
 
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
     -->
 
-    <!-- ionic/angularjs js -->
-    <script src="lib/ionic/js/ionic.bundle.js"></script>
+</head>
+<body ng-app="app">
+    <div ui-view> </div>
+</body>
 
-    <!-- cordova script (this will be a 404 during development) -->
-    <script src="cordova.js"></script>
-
-    <!-- your app's js -->
-    <script src="app/app.js"></script>
-  </head>
-  <body ng-app="starter">
-
-    <ion-pane>
-      <ion-header-bar class="bar-stable">
-        <h1 class="title">Ionic Blank Starter</h1>
-      </ion-header-bar>
-      <ion-content>
-      </ion-content>
-    </ion-pane>
-  </body>
+<script src="lib/ionic/js/ionic.bundle.js"></script>
+<script src="lib/ionic-material/dist/ionic.material.min.js"></script>
+<script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="lib/stamplay-js-sdk/dist/stamplay.min.js"> </script>
+<script src="cordova.js"></script>
+<script src="app/app.js"></script>
+<script src="app/components/home/homeController.js"></script>
+<script src="app/components/login/loginController.js"></script>
+<script src="app/shared/stamplayApi.js"></script>
 </html>

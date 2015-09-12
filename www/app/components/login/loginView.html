@@ -1,0 +1,25 @@
+<div class="ionic login">
+    <div class="hero no-header flat">
+        <div class="content">
+            <i class="ion-chatboxes icon hero-icon royal-bg"></i>
+            <h1>App Name</h1>
+        </div>
+    </div>
+    <div class="list">
+        <label class="item item-input item-md-label" placeholder="Username" type="text">
+            <input type="text" ng-model="username">
+            <span class="input-label">Username</span>
+        </label>
+        <label class="item item-input item-md-label" placeholder="Password" type="password">
+            <input type="password" ng-model="password">
+            <span class="input-label">Password</span>
+        </label>
+    </div>
+    <div class="padding">
+        <button class="button button-block button-positive waves-effect waves-button waves-light" ng-click="login(username, password)">Login</button>
+    </div>
+    <div class="button-bar">
+        <button class="button button-small button-outline button-assertive light-bg icon-left ion-social-google waves-effect waves-button waves-light" ng-click="loginAs('google')">Google+</button>
+        <button class="button button-small button-outline button-positive light-bg icon-left ion-social-facebook waves-effect waves-button waves-light" ng-click="loginAs('facebook')">Facebook</button>
+    </div>
+</div>
