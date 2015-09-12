@@ -11,5 +11,9 @@
         "ionic-material": "~0.4.2",
         "robotodraft": "~1.1.0",
         "stamplay-js-sdk": "stamplay-sdk#~1.2.8"
+    },
+    "resolutions": {
+        "angular": "~1.4.5",
+        "angular-ui-router": "~0.2.15"
     }
 }
