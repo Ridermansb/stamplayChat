@@ -1,14 +1,3 @@
-/// <reference path="../../../../typings/angularjs/angular.d.ts" />
-/// <reference path="../../../../typings\angularjs\angular-resource.d.ts" />
-
-export module stamplay {
-    import Stamplay = module("../../../lib/stamplay-js-sdk/dist/stamplay.min.js");
-}
-
-declare module "../../../lib/stamplay-js-sdk/dist/stamplay.min.js" {
-    function getData(): number;
-}
-
 module app.controller {
 
     interface ILoginScope extends angular.IScope {
@@ -17,22 +6,20 @@ module app.controller {
     }
 
     export class LoginController {
-        constructor($scope : ILoginScope) {
-
-            var user = new Stamplay.User().Model;
+        constructor($scope : ILoginScope, userService : app.service.UserService) {
 
             $scope.loginAs = function(stamplayServiceLogin) {
-                user.login( stamplayServiceLogin );
+                userService.loginAs(stamplayServiceLogin)
             };
 
             $scope.login = function(userName, password) {
-                user.login(userName, password)
-                .then(function(){
-                    //success callback
-                    console.log(user.get('email'));
-                }, function (err){
-                    //error callback
-                });
+                userService.login(userName, password)
+                    .then(function(){
+                        //success callback
+                        console.log(user.get('email'));
+                    }, function (err){
+                        //error callback
+                    });
             };
 
             return $scope;
